@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path')
 
 let bmiData = fs.readFileSync('./inputData/data.json');
 bmiData = JSON.parse(bmiData);
@@ -47,6 +48,9 @@ bmiData.forEach(p => {
     p["Health risk"] = healthRisk;
 })
 
+if (!fs.existsSync(path.join('outputData'))){
+    fs.mkdirSync(path.join('outputData'));
+}
 fs.writeFileSync('./outputData/finalOutput.json', JSON.stringify(bmiData));
 
 module.exports = { Overweight, bmiData, bmiCalcultor}
