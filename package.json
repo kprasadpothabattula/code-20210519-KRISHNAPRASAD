@@ -1,0 +1,21 @@
+{
+  "name": "code-2021-05-19-krishna-prasad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --config ./webpack.config.js",
+    "start": "node dist/bin/index-bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3",
+    "webpack": "^5.37.1",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.7.0"
+  }
+}
